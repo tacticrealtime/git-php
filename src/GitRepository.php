@@ -151,7 +151,7 @@
 
 		/**
 		 * Removes branch.
-		 * `git branch -d <name>`
+		 * `git branch -D <name>`
 		 * @param  string
 		 * @throws Cz\Git\GitException
 		 * @return self
@@ -160,7 +160,7 @@
 		{
 			return $this->begin()
 				->run('git branch', array(
-					'-d' => $name,
+					'-D' => $name,
 				))
 				->end();
 		}
